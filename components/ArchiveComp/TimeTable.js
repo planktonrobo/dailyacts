@@ -9,8 +9,8 @@ const TimeTable = ({ table, articles, loading, error }) => {
 
 
   return (
-    <div className="antialiased py-8">
-      <div className="relative container md:mx-auto px-6 flex flex-col space-y-8">
+    <div className="antialiased py-8 ">
+      <div className="relative container md:mx-auto px-6 flex flex-col space-y-8 ">
         {table === false && loading && (
           <>
             <div className="absolute z-0 w-2 h-full bg-red-50 dark:bg-gray-800 dark:border-gray-700 shadow-md border left-16 border-red-100 inset-0 md:mx-auto md:right-0 md:left-0">

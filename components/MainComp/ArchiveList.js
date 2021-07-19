@@ -17,7 +17,7 @@ const Alist = ({ user }) => {
           <ArchiveSkeleton/>
           <ArchiveSkeleton/>
           <ArchiveSkeleton/> </>}
-        {archives && archives.length ? archives.map((archive)=> <IndArchive key={archive.docId} archive={archive}/>) : archives && !archives.length ? <ArchiveSkeleton/>: null}
+        {archives && archives.length ? archives.map((archive)=> <IndArchive user={user} key={archive.docId} archive={archive}/>) : archives && !archives.length ? <ArchiveSkeleton/>: null}
         {error && error.message}
       </div>
     </div>

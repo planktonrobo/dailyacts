@@ -55,10 +55,10 @@ const Archive = () => {
   }, [order, articles, table])
   return (
     <UserContext.Provider value={{ user }}>
-      <div className="min-h-screen min-w-screen bg-red-50 dark:bg-gray-900 overflow-y-scroll overflow-x-hidden">
+      <div className="min-h-screen min-w-screen bg-red-50 dark:bg-gray-900">
         <Header />
         <div className="container mx-auto max-w-4xl">
-          <main className="pt-20">
+          <main className="pt-20 overflow-x-hidde mr-4 ">
             <Title
               order={order}
               table={table}

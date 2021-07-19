@@ -3,7 +3,7 @@ import { formatDistance } from "date-fns";
 import More from './More'
 import AddArticle from "./AddArticle";
 import Link from "next/link";
-const IndArchive = ({ archive }) => {
+const IndArchive = ({ archive, user }) => {
   return (
     <div className="grid grid-cols-1 bg-red-50 dark:bg-gray-800 shadow-lg rounded-3xl h-auto w-80 sm:w-72 md:w-68 max-w-full px-8 py-4">
       <div className="flex-none">
@@ -28,7 +28,7 @@ const IndArchive = ({ archive }) => {
         </div>
         <div className="flex align-items gap-x-1 pt-2 text-sm text-red-300 dark:text-gray-200">
         <Link href={`/archive/${archive.docId}`}><a className="border-b-2 border-red-50 hover:border-red-200 dark:border-gray-800 dark:hover:border-gray-200">{`${archive.articles.length} articles`}</a></Link>
-          <AddArticle archive={archive}/>
+          <AddArticle archive={archive} user={user}/>
         </div>
       </div>
       <div className="flex justify-end dark:text-gray-400">

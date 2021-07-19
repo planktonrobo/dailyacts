@@ -3,7 +3,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState, useContext, useEffect } from "react";
 import FirebaseContext from "../../context/firebase";
 
-const AddArticle = ({ archive }) => {
+const AddArticle = ({ archive, user }) => {
   const { firebase, FieldValue } = useContext(FirebaseContext);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -112,6 +112,7 @@ const AddArticle = ({ archive }) => {
                 archive: archive.docId,
                 article: articleState,
                 published: ya,
+                uploader: user.uid,
               });
             setLoading(false);
             closeModal();

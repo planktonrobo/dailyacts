@@ -15,7 +15,7 @@ const Login = () => {
           <div className="flex justify-center items-center">
             <span className="px-2">
               <img
-                alt="G"
+                alt=""
                 className="w-5"
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png"
               />
@@ -27,7 +27,7 @@ const Login = () => {
           <div className="flex justify-center items-center">
             <span className="px-2">
               <img
-                alt="F"
+                alt=""
                 className="w-5"
                 src="https://seeklogo.com/images/T/twitter-logo-A84FE9258E-seeklogo.com.png"
               />
@@ -37,9 +37,9 @@ const Login = () => {
         </TwitterLogin>
         <FacebookLogin auth={auth}>
           <div className="flex justify-center items-center">
-            <span className="px-3">
+            <span className="px-2">
               <img
-                alt="F"
+                alt=""
                 className="w-5 ml-3"
                 src="https://facebookbrand.com/wp-content/uploads/2019/04/f_logo_RGB-Hex-Blue_512.png?w=512&h=512"
               />
