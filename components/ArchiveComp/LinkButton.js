@@ -21,10 +21,10 @@ const LinkButton = ({ link }) => {
   return (
     <>
       {open && <div
-        className="fixed top-20 z-40 left-2/3 bg-green-100 border-t-4 border-green-500 rounded-b text-green-900 px-4 py-3 shadow-md"
+        className="fixed top-20 z-40 left-2/3 bg-green-100 border-t-4 text-xs sm:text-sm border-green-500 rounded-b text-green-900 px-4 py-3 shadow-md"
         role="alert"
       >
-        <div className="flex items-center">
+        <div className="flex justify-start items-center">
           <div className="pr-1">
             <svg
               xmlns="http://www.w3.org/2000/svg"
