@@ -6,9 +6,9 @@ const Tabler = ({articles}) => {
         <table className="table-auto border  dark:text-gray-300 ">
   <thead className="border ">
     <tr >
-      <th className="bg-red-100 dark:bg-gray-800 border border-red-200 dark:border-gray-700 text-left px-2 py-1 sm:px-8 sm:py-4">Date</th>  
-      <th className="bg-red-100 dark:bg-gray-800 border border-red-200 dark:border-gray-700 text-left px-2 py-1 sm:px-8 sm:py-4 ">Title</th>
-      <th className="bg-red-100 dark:bg-gray-800 border  border-red-200 dark:border-gray-700 text-left px-2 py-1 sm:px-8 sm:py-4">Source</th>
+      <th className="border border-red-200 dark:border-gray-700 text-left px-2 py-1 sm:px-8 sm:py-4">Date</th>  
+      <th className="border border-red-200 dark:border-gray-700 text-left px-2 py-1 sm:px-8 sm:py-4 ">Title</th>
+      <th className="border  border-red-200 dark:border-gray-700 text-left px-2 py-1 sm:px-8 sm:py-4">Source</th>
 
     </tr>
   </thead>
