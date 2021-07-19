@@ -7,9 +7,9 @@ const IndArchive = ({ archive }) => {
   return (
     <div className="grid grid-cols-1 bg-red-50 dark:bg-gray-800 shadow-lg rounded-3xl h-auto w-80 sm:w-72 md:w-68 max-w-full px-8 py-4">
       <div className="flex-none">
-        {archive.emoji && <div className="text-3xl "> <Link href={`/archive/${archive.docId}`}><a >{archive.emoji}</a></Link></div>}
+        {archive.emoji && <div className="text-3xl pb-1"> <Link href={`/archive/${archive.docId}`}><a >{archive.emoji}</a></Link></div>}
         <div
-          className={` break-words text-gray-700 dark:text-gray-50 text-xl antialiased font-semibold ${!archive.emoji && "pt-7"}`}
+          className={` break-words text-gray-700 dark:text-gray-50 text-xl antialiased font-semibold ${!archive.emoji && "pt-8"}`}
         >
           <Link href={`/archive/${archive.docId}`}><a >{archive.title}</a></Link>
         </div>

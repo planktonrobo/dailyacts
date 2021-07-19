@@ -9,7 +9,7 @@ const Login = () => {
   return (
     <div className="flex justify-center px-8">
       <div className=" text-lg sm:text-xl dark:text-white px-4 py-10 bg-red-50 dark:bg-gray-800 shadow-lg rounded-3xl sm:p-20 max-w-full">
-        <h1>Login to save to archives.</h1>
+        <h1 className="pb-2">Login to create and save to archives.</h1>
 
         <GoogleLogin auth={auth}>
           <div className="flex justify-center items-center">

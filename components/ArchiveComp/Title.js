@@ -41,7 +41,7 @@ const Title = ({
       <div className="p-10 grid-cols-1 flex md:justify-center">
         <div className="flex-none px-3">
           {archive.emoji && (
-            <div className="text-5xl sm:text-6xl pt-4 pb-2 sm:pb-4">
+            <div className="text-5xl sm:text-6xl pt-4 pb-4">
               {archive.emoji}
             </div>
           )}
@@ -70,12 +70,12 @@ const Title = ({
             )}
           </div>
           
-            <div className="absolute left-3/4 top-1/8 flex gap-3 items-center text-gray-800 dark:text-gray-300">
+            <div className="absolute left-2/3 top-1/8 pr-10 flex gap-3 items-center text-gray-800 dark:text-gray-300">
              
-              {user.displayName === userState?.userRecord.displayName && (
+              {user?.displayName === userState?.userRecord.displayName && (
                 <AddArticle archive={archive} />
               )}
-              {archive.articles.length > 0 && (
+             
                 <>
               <button
                 className={`p-1 rounded-xl ${order &&
@@ -116,7 +116,7 @@ const Title = ({
                     d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
                   />
                 </svg>
-              </button> </>)}
+              </button> </>
               
             </div>
          
@@ -128,7 +128,7 @@ const Title = ({
       <div className="flex-none px-3">
         <div className="animate-pulse h-12 w-12 sm:h-14 sm:w-14 my-4 sm:my-6 bg-gray-300 rounded-full"></div>
         <div className="animate-pulse h-12 w-48 sm:h-14 sm:w-72 bg-gray-300 rounded-full"></div>
-        <div className="animate-pulse md:flex md:justify-center sm:mb-4 text-xs text-gray-300 py-2 sm:py-4">
+        <div className="animate-pulse md:flex md:justify-center mb-4 text-xs text-gray-300 py-2 sm:py-4">
           <div className="flex sm:py-2 items-center gap-2">
             <div>
               <div className="w-6 h-6 rounded-full bg-gray-400 animate-pulse" />

@@ -18,6 +18,7 @@ const ArticleRight = ({article}) => {
           <p className="pt-1 text-xs sm:text-sm">
             {article.article.description}
           </p>
+          <div className="text-sm pt-2">{article.article.source.split('.')[0]}</div>
         </div>
       </div>
     </div>

@@ -21,11 +21,9 @@ const firebase = !Firebase.apps.length ? Firebase.initializeApp(config) : Fireba
   
 const  {FieldValue}  = Firebase.firestore;
 
-const {TimeStamp} = Firebase.firestore
-
 const auth = Firebase.auth()
 
 const functions = Firebase.functions()
 
 
-export { firebase, FieldValue, auth, TimeStamp };
+export { firebase, FieldValue, auth };
