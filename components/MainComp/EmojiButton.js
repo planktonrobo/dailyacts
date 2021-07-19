@@ -36,7 +36,7 @@ const EmojiButton = ({chosenEmoji, setChosenEmoji}) => {
           ref={setPopperElement}
           style={styles.popper}
           {...attributes.popper}
-          className="ml-20 mb-10"
+          className="ml-10 mb-10"
         >
          {!chosenEmoji && <Picker set="apple" onSelect={(emoji)=> setChosenEmoji(emoji)}/>}
         </Popover.Panel>
