@@ -5,7 +5,7 @@ import Link from "next/link";
 import LinkButton from "./LinkButton";
 const ArticleRight = ({ article, handleDelete, user }) => {
   return (
-    <div className="relative z-10">
+    <div className="relative px-2 z-10">
       <Link href={article.article.url} aria-label="original article">
         <a>
           <img
