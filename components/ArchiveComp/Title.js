@@ -39,7 +39,7 @@ const Title = ({
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="p-8 grid-cols-1 md:flex md:justify-center w-full">
+      <div className="p-6 grid-cols-1 md:flex md:justify-center w-full">
         <div className="">
           {archive.emoji && (
             <div className=" text-4xl sm:text-5xl pt-4 pb-4">
@@ -123,7 +123,7 @@ const Title = ({
       </div>
     </>
   ) : (
-    <div className="p-8 grid-cols-1 flex md:justify-center">
+    <div className="p-6 grid-cols-1 flex md:justify-center">
       <div className="flex-none ">
         <div className="animate-pulse h-10 w-10 sm:h-12 sm:w-12 my-4  bg-gray-300 rounded-full"></div>
         <div className="animate-pulse h-10 w-48 sm:h-12 sm:w-72 bg-gray-300 rounded-full"></div>
