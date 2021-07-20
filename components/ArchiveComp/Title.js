@@ -123,7 +123,7 @@ const Title = ({
       </div>
     </>
   ) : (
-    <div className="p-10 grid-cols-1 flex md:justify-center">
+    <div className="py-10 px-6 grid-cols-1 flex md:justify-center">
       <div className="flex-none ">
         <div className="animate-pulse h-10 w-10 sm:h-12 sm:w-12 my-4  bg-gray-300 rounded-full"></div>
         <div className="animate-pulse h-10 w-48 sm:h-12 sm:w-72 bg-gray-300 rounded-full"></div>
