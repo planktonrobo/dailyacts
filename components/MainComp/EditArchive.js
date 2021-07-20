@@ -5,8 +5,8 @@ import FirebaseContext from "../../context/firebase";
 
 const EditArchive = ({ archive }) => {
   const { firebase, FieldValue } = useContext(FirebaseContext);
-  const [chosenEmoji, setChosenEmoji] = useState(null);
-  const [title, setTitle] = useState(null);
+  const [chosenEmoji, setChosenEmoji] = useState(archive?.emoji);
+  const [title, setTitle] = useState(archive?.title);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   let [isOpen, setIsOpen] = useState(false);
@@ -43,11 +43,6 @@ const EditArchive = ({ archive }) => {
       setLoading(false);
     }
   }
-
-  useEffect(() => {
-    setTitle(archive?.title)
-    setChosenEmoji(archive?.emoji)
-  }, [archive])
   return (
     <>
       <button
@@ -82,7 +77,7 @@ const EditArchive = ({ archive }) => {
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <Dialog.Overlay className="fixed inset-0 overflow-y-scroll backdrop-filter backdrop-blur-sm overflow-hidden " />
+              <Dialog.Overlay className="fixed inset-0 overflow-y-scroll backdrop-filter backdrop-blur-sm overflow-x-hidden " />
             </Transition.Child>
 
             {/* This element is to trick the browser into centering the modal contents. */}
