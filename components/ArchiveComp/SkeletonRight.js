@@ -3,7 +3,7 @@ import React from "react";
 
 const SkeletonRight = () => {
   return (
-    <div className="relative z-10">
+    <div className="relative z-10 px-2">
       <div
         className="bg-gray-400 animate-pulse h-24 w-28 sm:w-32 sm:h-28 object-cover rounded-xl shadow-xl xs:absolute md:mx-auto md:left-0 md:right-0"
       />
