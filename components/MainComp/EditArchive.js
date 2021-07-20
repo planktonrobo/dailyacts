@@ -1,12 +1,12 @@
 import { Dialog, Transition } from "@headlessui/react";
-import { Fragment, useState, useContext } from "react";
+import { Fragment, useState, useContext, useEffect } from "react";
 import NewArchiveName from "./NewArchiveName";
 import FirebaseContext from "../../context/firebase";
 
 const EditArchive = ({ archive }) => {
   const { firebase, FieldValue } = useContext(FirebaseContext);
   const [chosenEmoji, setChosenEmoji] = useState(null);
-  const [title, setTitle] = useState("");
+  const [title, setTitle] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   let [isOpen, setIsOpen] = useState(false);
@@ -14,8 +14,6 @@ const EditArchive = ({ archive }) => {
   function closeModal() {
     setIsOpen(false);
     setError(null);
-    setTitle("");
-    setChosenEmoji(null);
   }
 
   function openModal() {
@@ -35,7 +33,7 @@ const EditArchive = ({ archive }) => {
           .doc(archive.docId)
           .update({
             title: title.trim(),
-            emoji: chosenEmoji ? chosenEmoji.native : null,
+            emoji: chosenEmoji ? chosenEmoji.native || chosenEmoji : null,
             updated: FieldValue.serverTimestamp(),
           });
         closeModal();
@@ -45,6 +43,11 @@ const EditArchive = ({ archive }) => {
       setLoading(false);
     }
   }
+
+  useEffect(() => {
+    setTitle(archive?.title)
+    setChosenEmoji(archive?.emoji)
+  }, [archive])
   return (
     <>
       <button

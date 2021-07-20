@@ -3,7 +3,7 @@ import React from "react";
 import { handleDate } from "../../helpers";
 import Link from "next/link";
 import LinkButton from "./LinkButton";
-const ArticleRight = ({ article }) => {
+const ArticleRight = ({ article, handleDelete, user }) => {
   return (
     <div className="relative z-10">
       <Link href={article.article.url} aria-label="original article">
@@ -31,7 +31,33 @@ const ArticleRight = ({ article }) => {
             {article.article.description}
           </p>
           <div className="text-sm pt-2 flex justify-between pr-2">
-            <div>{article.article.source.split(".")[0]}</div><div><LinkButton link={article.article.url}/></div>
+            <div>{article.article.source.split(".")[0]}</div>
+            <div className="flex items-center gap-2 text-gray-700 dark:text-gray-200">
+              {user?.uid === article?.uploader && (
+                <button
+                  className="p-2 rounded w-full hover:bg-red-100 dark:hover:bg-gray-900"
+                  onClick={() =>
+                    handleDelete(article.docId, article.article.url)
+                  }
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-4 w-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                    />
+                  </svg>
+                </button>
+              )}
+              <LinkButton link={article.article.url} />
+            </div>
           </div>
         </div>
       </div>

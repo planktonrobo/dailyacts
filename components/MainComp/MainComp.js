@@ -21,11 +21,10 @@ const MainComp = () => {
     }
   );
   const archives = value?.docs.map((archive)=> ({...archive.data(), docId: archive.id}))
-  const [active, setActive] = useState("archives");
   return (
     <ArchiveContext.Provider value={{archives, loading, error}}>
-      <Nav active={active} setActive={setActive} />
-      {active === 'archives' ?   <Archive user={user} /> : <Explore/>}
+    
+       <Archive user={user} />
     
     </ArchiveContext.Provider>
   );

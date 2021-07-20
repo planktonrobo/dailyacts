@@ -15,7 +15,7 @@ const NewArchiveName = ({ chosenEmoji, setChosenEmoji, title, setTitle, setError
     <>
       {chosenEmoji ? (
         <div>
-          <span className="text-3xl">{chosenEmoji.native}</span>
+          <span className="text-3xl">{chosenEmoji.native || chosenEmoji}</span>
           <button
             onClick={() => setChosenEmoji(null)}
             className="fixed text-xs text-red-300 dark:text-gray-500"

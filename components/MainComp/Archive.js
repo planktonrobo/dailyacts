@@ -2,7 +2,9 @@ import Login from "../Login/Login";
 import Alist from './ArchiveList'
 const Archive = ({user}) => {
     return (
-        !user  ? <Login/> : <Alist user={user}/>
+        <div className="pt-10">
+        {!user  ? <Login/> : <Alist user={user}/>}
+        </div>
     )
 }
 

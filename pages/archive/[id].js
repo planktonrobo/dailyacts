@@ -23,7 +23,7 @@ const Archive = () => {
       snapshotListenOptions: { includeMetadataChanges: true },
     }
   );
-  const archive = value && {...value.data(), docId:value.id};
+  const archive = value && { ...value.data(), docId: value.id };
   if (!loading) {
     value && !value.data() && router.replace("/404");
   }
@@ -40,19 +40,20 @@ const Archive = () => {
     }
   );
 
-
-  const[articles, setArticles] = useState()
-
-  useEffect(() => {
-    setArticles(value1?.docs.map((article) => ({
-      ...article.data(),
-      docId: article.id,
-    })))
-  }, [value1])
+  const [articles, setArticles] = useState();
 
   useEffect(() => {
-    articles && setArticles(articles.reverse())
-  }, [order, articles, table])
+    setArticles(
+      value1?.docs.map((article) => ({
+        ...article.data(),
+        docId: article.id,
+      }))
+    );
+  }, [value1]);
+
+  useEffect(() => {
+    articles && setArticles(articles.reverse());
+  }, [order, articles, table]);
   return (
     <UserContext.Provider value={{ user }}>
       <div className="min-h-screen min-w-screen bg-red-50 dark:bg-gray-900">
@@ -70,6 +71,7 @@ const Archive = () => {
               setArticles={setArticles}
             />
             <TimeTable
+              archive={archive}
               articles={articles}
               loading={loading1}
               errror={error1}

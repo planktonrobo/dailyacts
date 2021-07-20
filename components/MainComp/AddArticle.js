@@ -194,7 +194,7 @@ const AddArticle = ({ archive, user }) => {
                       onChange={handleChange}
                       value={url}
                       type="url"
-                      className="w-2/3 shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-xs sm:text-sm"
+                      className="w-full sm:w-2/3 shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-xs sm:text-sm"
                       id="url"
                       placeholder="https://www.nytimes.com/todays-beat"
                     />
@@ -237,7 +237,7 @@ const AddArticle = ({ archive, user }) => {
 
                       <img className="py-2" src={articleState.image} alt="" />
                       <span className="text-xs text-gray-400 pb-2">
-                        {articleState?.pubished
+                        {articleState?.published
                           ? articleState.published
                           : getDatefromUrl()}
                       </span>

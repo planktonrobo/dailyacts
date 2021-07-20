@@ -3,7 +3,7 @@ import React, { useEffect, useState, useContext } from "react";
 import UserContext from "../../context/user";
 import Head from "next/head";
 import AddArticle from "../MainComp/AddArticle";
-import LinkButton from "./LinkButton";
+import EditArchive from '../MainComp/EditArchive'
 
 const Title = ({
   archive,
@@ -29,6 +29,7 @@ const Title = ({
   }, [archive, getuser]);
   return archive ? (
     <>
+    
       <Head>
         <title>{`${archive.title} - The Daily Acts`}</title>
         <meta
@@ -46,7 +47,7 @@ const Title = ({
             </div>
           )}
           <div className="md:text-center text-4xl break-words text-gray-800 dark:text-white sm:text-5xl font-bold">
-            {archive.title}
+            {archive.title}{user?.uid === archive?.publisher && <span className="absolute"><EditArchive archive={archive}/></span>}
           </div>
           <div className="md:flex md:justify-center text-xs text-gray-400 py-2 sm:py-4">
             {userState ? (

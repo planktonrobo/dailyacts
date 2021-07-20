@@ -3,7 +3,7 @@ import MyDropdown from "./MyDropdown";
 
 const Header = () => {
   return (
-    <header className="z-40 bg-red-50 fixed w-full h-20 border-b border-gray-primary mb-8 dark:bg-gray-900 dark:border-white">
+    <header className="z-40 bg-red-50 fixed w-full h-20 border-b border-red-100 mb-8 dark:bg-gray-900 dark:border-white">
       <div className="container mx-auto max-w-screen-lg h-full">
         <div className="flex justify-center h-full">
           <div className="text-gray-700 text-center flex items-center align-items">
