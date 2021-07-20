@@ -27,7 +27,7 @@ const TimeTable = ({ table, articles, loading, error, archive }) => {
     }
   }
   return (
-    <div className="antialiased p-8">
+    <div className="antialiased py-8 px-2">
       <div className="relative container md:mx-auto px-2 flex flex-col space-y-8 ">
         {table === false && loading && (
           <>
