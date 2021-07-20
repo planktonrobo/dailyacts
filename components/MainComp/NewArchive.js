@@ -79,7 +79,7 @@ const NewArchive = ({ user }) => {
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog
           as="div"
-          className="fixed inset-0 z-10 "
+          className="fixed bottom-1/4 z-10 "
           onClose={closeModal}
         >
           <div className=" px-4 text-center">
