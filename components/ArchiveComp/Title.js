@@ -39,7 +39,7 @@ const Title = ({
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="p-10 grid-cols-1 md:flex md:justify-center w-full">
+      <div className="py-10 px-6 grid-cols-1 md:flex md:justify-center w-full">
         <div className="">
           {archive.emoji && (
             <div className=" text-4xl sm:text-5xl pt-4 pb-4">
