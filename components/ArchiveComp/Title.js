@@ -36,6 +36,9 @@ const Title = ({
           name="description"
           content={`Archive by ${archive.publisherName}`}
         />
+        <meta property="og:title" content={`${archive.title} - The Daily Acts`}/>
+        <meta property="og:url" content={`https://www.dailyacts.io/archive/${archive.docId}`}/>
+        <meta property="og:image" content="https://ibb.co/VScN6Hn"/>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

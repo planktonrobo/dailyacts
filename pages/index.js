@@ -10,7 +10,10 @@ export default function Home() {
     <div className="min-h-screen min-w-screen bg-red-50 dark:bg-gray-900">
       <Head>
         <title>The Daily Acts</title>
-        <meta name="description" content="News 4 you" />
+        <meta name="description" content="Create and share news archives" />
+        <meta property="og:title" content="The Daily Acts"/>
+        <meta property="og:url" content="https://www.dailyacts.io"/>
+        <meta property="og:image" content="https://ibb.co/VScN6Hn"/>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
