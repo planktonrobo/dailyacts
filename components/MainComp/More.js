@@ -31,7 +31,7 @@ const More = ({ archive }) => {
           />
         </svg>
       </Menu.Button>
-      <Menu.Items className="absolute flex flex-col 4-30 origin-top-left px-2 bg-red-50  dark:bg-gray-800   rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+      <Menu.Items className="absolute gap-2 flex flex-col 4-30 origin-top-left px-2 bg-red-50  dark:bg-gray-800   rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
         {/* Use the `active` render prop to conditionally style the active item. */}
      <Menu.Item><LinkButton link={`${window.location.host}/archive/${archive.docId}`}/></Menu.Item>
 
